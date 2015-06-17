@@ -15,6 +15,7 @@ L.Control.OSMGeocoder = L.Control.extend({
                 console.log("ERROR: didn't find a result");
                 return;
             }
+            var marker = L.marker([results[0].lat, results[0].lon]).addTo(map);
 			var bbox = results[0].boundingbox,
 			first = new L.LatLng(bbox[0], bbox[2]),
 			second = new L.LatLng(bbox[1], bbox[3]),
